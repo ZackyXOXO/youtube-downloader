@@ -1,11 +1,13 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 const ytdl = require('ytdl-core');
 
 app.set("view engine", "ejs")
 
 app.get('/', (req, res) => {
-    return res.render('index')
+    res.sendFile(path.join( __dirname,'/index.html'))
+    // res.sendFile('index.html')
 })
 
 app.get('/download', async (req, res) => {
