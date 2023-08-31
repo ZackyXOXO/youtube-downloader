@@ -7,6 +7,7 @@ app.set("view engine", "ejs")
 
 app.get('/', (req, res) => {
     res.sendFile(path.join( __dirname,'/index.html'))
+    // res.send('<h1>Hello World!</h1>')
     // res.sendFile('index.html')
 })
 
